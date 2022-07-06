@@ -14,14 +14,20 @@ export const SideNav = (props) => {
         </div>
         <div className="sidenav">
           <a className={navCurrent ? "select" : ""} onClick={() => navSwitch(true)}>
+            <div className="navbtn">
+              <div className="data">
             <ImHome2 />
             <span>Overview</span>
             <IoIosArrowForward />
+            </div>
+            </div>
           </a>
           <a className={navCurrent ? "" : "select"} onClick={() => navSwitch(false)}>
+          <div className="navbtn">
             <AiOutlineDatabase />
             <span>Content SEO</span>
             <IoIosArrowForward />
+            </div>
           </a>
         </div>
       </div>
