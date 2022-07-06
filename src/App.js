@@ -1,25 +1,14 @@
-import logo from './logo.svg';
-import './App.css';
+import { useState } from "react";
+import { SideNav } from "./components/SideNav";
+import { Content } from "./pages/Content";
+import { Overview } from "./pages/Overview";
 
-function App() {
+export const App = () => {
+  const [showOver, setShowOver] = useState(true);
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <SideNav navSwitch={setShowOver} navCurrent={showOver} />
+      {showOver ? <Overview /> : <Content />}
     </div>
   );
-}
-
-export default App;
+};
