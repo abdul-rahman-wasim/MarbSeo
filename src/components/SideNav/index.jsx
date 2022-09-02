@@ -16,17 +16,17 @@ export const SideNav = (props) => {
           <a className={navCurrent ? "select" : ""} onClick={() => navSwitch(true)}>
             <div className="navbtn">
               <div className="data">
-            <ImHome2 />
-            <span>Overview</span>
-            <IoIosArrowForward />
-            </div>
+                <ImHome2 />
+                <span>Overview</span>
+                <IoIosArrowForward />
+              </div>
             </div>
           </a>
           <a className={navCurrent ? "" : "select"} onClick={() => navSwitch(false)}>
-          <div className="navbtn">
-            <AiOutlineDatabase />
-            <span>Content SEO</span>
-            <IoIosArrowForward />
+            <div className="navbtn">
+              <AiOutlineDatabase />
+              <span>Content SEO</span>
+              <IoIosArrowForward />
             </div>
           </a>
         </div>
